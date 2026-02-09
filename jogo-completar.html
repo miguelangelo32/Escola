@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jogo de Completar Espaços em Branco</title>
+  <link rel="stylesheet" href="jogo-completar.css" />
+</head>
+<body>
+  <main class="page">
+    <header class="header">
+      <h1>Completar Espaços em Branco</h1>
+      <p>Arrasta as palavras da caixa para os espaços corretos. Cada acerto vale 10 pontos.</p>
+    </header>
+
+    <section class="controls">
+      <button id="carregar" type="button">Carregar frases</button>
+      <button id="repor" type="button" disabled>Repor jogo</button>
+      <div class="pontuacao" aria-live="polite">
+        Pontuação: <span id="pontuacao">0</span>
+      </div>
+    </section>
+
+    <section class="conteudo">
+      <div class="frases" id="frases" aria-live="polite"></div>
+
+      <aside class="palavras">
+        <h2>Caixa de palavras</h2>
+        <div class="palavras-caixa" id="palavras-caixa"></div>
+      </aside>
+    </section>
+
+    <footer class="footer">
+      <p>
+        As frases são lidas a partir do ficheiro <code>frases.txt</code>. As palavras a preencher
+        devem estar entre colchetes, por exemplo: <code>O gato [correu] rápido.</code>
+      </p>
+    </footer>
+  </main>
+
+  <script src="jogo-completar.js"></script>
+</body>
+</html>
